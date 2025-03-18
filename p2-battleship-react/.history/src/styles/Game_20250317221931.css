@@ -1,0 +1,164 @@
+/* 游戏页面样式 */
+.game-container {
+  display: flex;
+  flex-direction: column; /* 移动端默认上下布局 */
+  gap: 40px;
+  align-items: center;
+  margin: 20px 0;
+  width: 100%;
+  padding: 0 10px;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.board-section {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.board-section h2 {
+  color: #444;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  border-bottom: 2px solid #0074d9;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.game-board {
+  border-collapse: collapse;
+  margin: 0 auto;
+  background-color: #d0e7f9;
+  width: 100%;
+  max-width: 400px; /* 限制最大宽度 */
+  table-layout: fixed; /* 固定表格布局 */
+  touch-action: manipulation; /* 优化触摸操作 */
+}
+
+.game-board td {
+  width: 10%; /* 每个单元格宽度为表格的10% */
+  aspect-ratio: 1/1; /* 保持正方形比例 */
+  border: 1px solid #555;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: min(1.2rem, 4vw);
+  -webkit-tap-highlight-color: transparent; /* 移除点击高亮 */
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.game-board td.hit {
+  background-color: #4caf50;
+  color: white;
+}
+
+.game-board td.miss {
+  background-color: #f44336;
+  color: white;
+  font-weight: bold;
+}
+
+.game-board td.ship {
+  background-color: #000;
+  color: white;
+}
+
+.game-board td:hover {
+  background-color: rgba(0, 116, 217, 0.2);
+  transform: scale(1.05);
+}
+
+.game-board td:active {
+  background-color: rgba(0, 116, 217, 0.4);
+  transform: scale(0.95);
+}
+
+.controls {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.timer {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.time-value {
+  font-weight: bold;
+  color: #0074d9;
+}
+
+.game-status {
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.status {
+  font-size: min(1.2rem, 4vw);
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.restart-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #0074d9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.restart-btn:hover {
+  background-color: #005bb5;
+}
+
+/* 移动端样式 */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .game-container {
+    gap: 30px;
+    flex-direction: column; /* 确保在移动端是上下布局 */
+  }
+
+  .board-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .timer {
+    font-size: 1rem;
+  }
+}
+
+/* 桌面端样式 */
+@media (min-width: 769px) {
+  .game-container {
+    flex-direction: row; /* 桌面端并排显示 */
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .board-section {
+    flex: 0 0 400px; /* 固定宽度 */
+    width: 400px;
+    max-width: 400px;
+    margin: 0 20px; /* 两边留边距 */
+  }
+}

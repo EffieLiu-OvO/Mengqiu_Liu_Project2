@@ -1,0 +1,214 @@
+/* 游戏页面样式 */
+.game-container {
+  display: flex;
+  flex-direction: column; /* 移动端默认上下布局 */
+  gap: 40px;
+  align-items: center;
+  margin: 20px 0;
+  width: 100%;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.board-section {
+  width: 100%;
+}
+
+.board-section h2 {
+  color: #444;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  border-bottom: 2px solid #0074d9;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.game-board {
+  border-collapse: collapse;
+  margin: 0 auto;
+  background-color: #d0e7f9;
+  max-width: 100%;
+  touch-action: manipulation; /* 优化触摸操作 */
+}
+
+.game-board td {
+  width: min(50px, calc(90vw / 10));
+  height: min(50px, calc(90vw / 10));
+  border: 1px solid #555;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: min(1.5rem, 4vw);
+  -webkit-tap-highlight-color: transparent; /* 移除点击高亮 */
+}
+
+.game-board td.hit {
+  background-color: #4caf50;
+  color: white;
+}
+
+.game-board td.miss {
+  background-color: #f44336;
+  color: white;
+  font-weight: bold;
+}
+
+.game-board td.ship {
+  background-color: #000;
+  color: white;
+  font-size: min(1.5rem, 4vw);
+}
+
+.game-board td:hover {
+  background-color: rgba(0, 116, 217, 0.2);
+  transform: scale(1.05);
+}
+
+.game-board td:active {
+  background-color: rgba(0, 116, 217, 0.4);
+  transform: scale(0.95);
+}
+
+.controls {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.timer {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.time-value {
+  font-weight: bold;
+  color: #0074d9;
+}
+
+.game-status {
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.status {
+  font-size: min(1.2rem, 4vw);
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.restart-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #0074d9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.restart-btn:hover {
+  background-color: #005bb5;
+}
+
+/* 移动端样式 */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .game-container {
+    gap: 30px;
+    flex-direction: column; /* 确保在移动端是上下布局 */
+    padding: 0 10px;
+  }
+
+  .board-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .board-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .timer {
+    font-size: 1rem;
+  }
+
+  /* 确保在移动设备上棋盘能完全显示 */
+  .game-board {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* 桌面端样式 */
+@media (min-width: 769px) {
+  .game-container {
+    flex-direction: row; /* 桌面端并排显示 */
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .board-section {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+}
+/* 添加到您的CSS文件末尾 */
+
+/* 移除现有的媒体查询，使用更直接的样式 */
+.game-board {
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed; /* 重要：确保单元格布局计算正确 */
+  border-collapse: collapse;
+  touch-action: manipulation;
+}
+
+.game-board td {
+  /* 固定大小计算方式 */
+  width: 30px; /* 使用固定大小而不是计算值 */
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+  padding: 0;
+  border: 1px solid #555;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #d0e7f9; /* 确保背景色正确 */
+  position: relative; /* 支持绝对定位内容 */
+}
+
+/* 确保内容能够居中显示 */
+.game-board td {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* 移动设备优化 */
+@media (max-width: 768px) {
+  .game-board {
+    margin: 0 auto;
+    width: 300px; /* 固定总宽度 */
+  }
+
+  .game-board td {
+    width: 30px; /* 固定宽度 */
+    height: 30px; /* 固定高度 */
+  }
+}
