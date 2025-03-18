@@ -30,7 +30,7 @@ Local storage for game state persistence
 CSS styling preserved from Project 1 with enhancements for interactivity
 
 ## Folder Structure
-'''bash
+```bash
 p2-battleship-react/
 ├── public/
 │   ├── index.html
@@ -66,7 +66,7 @@ p2-battleship-react/
 │   ├── App.js
 │   └── index.js
 └── README.md
-'''
+```
 
 ## Author
 Mengqiu Liu
