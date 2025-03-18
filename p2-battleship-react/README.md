@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# Battleship Game - Project 2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is an interactive Battleship game built with React as part of the CS5610 Web Development course at Northeastern University. This project transforms the static Battleship website from Project 1 into a fully interactive single-player game.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Two Game Modes**: 
+  - Normal Mode: Standard turn-based gameplay against AI
+  - Free Play Mode: Practice mode where only the player takes turns
+  
+- **Custom Ship Placement**:
+  - Players can manually position their ships on the board
+  - Alternatively, ships can be placed randomly
 
-### `npm start`
+- **Interactive Gameplay**:
+  - 10x10 game boards for both player and AI
+  - Turn-based combat
+  - Visual feedback for hits and misses
+  - Game state tracking and win detection
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Responsive Design**:
+  - Works on both desktop and mobile devices
+  - Sidebar navigation transforms to bottom navigation on small screens
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **State Management**:
+  - Game state management using React Context API
+  - Game state persistence using localStorage
 
-### `npm test`
+## How to Run the Project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js (v14 or higher recommended)
+- npm (v6 or higher)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation Steps
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+```bash
+git clone https://github.com/EffieLiu-OvO/CS5610_Project2.git
+cd CS5610_Project2/p2-battleship-react
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies:
+```bash
+npm install
+```
 
-### `npm run eject`
+3. Start the development server:
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Open your browser and navigate to:
+```
+http://localhost:3000
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Building for Production
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To create a production build:
+```bash
+npm run build
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The build files will be generated in the `build` directory.
 
-## Learn More
+## How to Play
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Start a New Game**:
+   - From the home page, choose either "Normal Game" or "Free Play"
+   - You'll be directed to the ship placement page
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **Place Your Ships**:
+   - You can place ships manually by selecting a ship and clicking on the board
+   - Click "Start Game" when ready
 
-### Code Splitting
+3. **During Gameplay**:
+   - Click on cells in the enemy board to attack
+   - In Normal mode, the AI will take turns attacking your board
+   - In Free Play mode, only you can attack
+   - The game status display shows whose turn it is and game progress
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. **Game End**:
+   - The game ends when either all player ships or all enemy ships are sunk
+   - Results page shows game statistics
+   - You can start a new game from the results page
+     
+## Known Issues and Limitations
 
-### Analyzing the Bundle Size
+- The AI uses a simple random targeting strategy and does not employ advanced targeting algorithms
+- Game statistics are not persistent between browser sessions (except for the current game state)
+- Custom ship placement is limited to predefined ship sizes and quantities
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Browser Compatibility
 
-### Making a Progressive Web App
+This application has been tested on:
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Author
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Mengqiu Liu
+- Email: liumengqiu23@gmail.com
+- GitHub: [github.com/EffieLiu-OvO](https://github.com/EffieLiu-OvO)
