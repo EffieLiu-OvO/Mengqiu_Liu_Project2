@@ -6,13 +6,13 @@ This repository contains projects for the CS5610 Web Development course. The cur
 ## Project 2: Interactive Battleship Game
 Project 2 enhances the static Battleship website from Project 1 by implementing interactive gameplay using React. The application now features:
 
-Complete transformation from static HTML/CSS to a React-based application
-Implementation of game logic for single-player Battleship against an AI opponent
-Two game modes: Normal Mode and Free Play Mode
-Custom ship placement feature allowing players to position their ships manually
-Game state management using React Context API
-Persistent game state using localStorage
-Responsive design for both desktop and mobile devices
+Complete transformation from static HTML/CSS to a React-based application <br>
+Implementation of game logic for single-player Battleship against an AI opponent <br>
+Two game modes: Normal Mode and Free Play Mode <br>
+Custom ship placement feature allowing players to position their ships manually <br>
+Game state management using React Context API <br>
+Persistent game state using localStorage <br>
+Responsive design for both desktop and mobile devices <br>
 
 ## Game Features
 10x10 game boards for both player and AI
@@ -23,11 +23,11 @@ Game timer to track gameplay duration
 Game status display and reset functionality
 
 ## Technical Implementation
-React components for modular UI construction
-React Router for page navigation
-Context API for state management
-Local storage for game state persistence
-CSS styling preserved from Project 1 with enhancements for interactivity
+React components for modular UI construction<br>
+React Router for page navigation<br>
+Context API for state management<br>
+Local storage for game state persistence<br>
+CSS styling preserved from Project 1 with enhancements for interactivity<br>
 
 ## Folder Structure
 ```bash
@@ -69,6 +69,6 @@ p2-battleship-react/
 ```
 
 ## Author
-Mengqiu Liu
-Email: liumengqiu23@gmail.com
-GitHub: github.com/EffieLiu-OvO
+Mengqiu Liu<br>
+Email: liumengqiu23@gmail.com<br>
+GitHub: github.com/EffieLiu-OvO<br>
