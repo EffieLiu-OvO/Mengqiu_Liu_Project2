@@ -1,7 +1,7 @@
 # CS5610 Web Development - Project Repository
 
 ## Overview
-This repository contains projects for the CS5610 Web Development course. The current implementation focuses on Project 2, which builds upon Project 1 by transforming a static Battleship game website into an interactive React application.
+This repository contains projects for the CS5610 Web Development course. The current implementation focuses on Project 2, which builds upon Project 1 by transforming a static Battleship game website into an interactive React application. It is now deployed on render, please visit：https://mengqiu-battleship.onrender.com
 
 ## Project 2: Interactive Battleship Game
 Project 2 enhances the static Battleship website from Project 1 by implementing interactive gameplay using React. The application now features:
